@@ -1,3 +1,44 @@
-<div class="container">
- <p ng-repeat="info in info" sample-directive>{{info | sampleFilter}}</p>
+<div class="board">
+    <div class="quiz">
+        <div ng-show="quiz.mode=='quiz'">
+            <div ng-repeat="question in quiz.currentQuestion">
+                <div class="counter">Javascrpit Quiz {{quiz.currentPage}} of {{quiz.totalQuestions}}</div>
+                <div class="question">{{question.text}}</div>
+                <div class="options">
+                    <div class="option" ng-repeat="option in question.options">
+                        {{quiz.buttonText[$index]}}- {{option}}
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <div class="buttonRow">
+                        <!-- <divclass="button"> -->
+                        <button ng-repeat="button in quiz.buttonText" ng-click="quiz.onSelect(question, button)" class="pull-left">{{button}}</button>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result" ng-show="quiz.mode=='result'">
+            <h2>Quiz Result</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answered</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="answered in quiz.answered">
+                        <td>{{answered.question}}</td>
+                        <td>{{answered.answered}}</td>
+                        <td ng-class="{ 'success': answered.isCorrect, 'failed': !answered.isCorrect }"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h4 class="alert alert-info text-center">You may close this window now.</h4>
+        </div>
+    </div>
 </div>

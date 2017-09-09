@@ -1,10 +1,14 @@
-# angular-gulp
-project skeleton with angularjs and gulp 
+# Angular Quiz Application
 
---> Clone the repository
---> npm install
---> bower install
---> gulp  - to build
---> gulp serve - to start the server
+- A sample quiz application using Anuglar Js 1.x
+
+#Intial Setup 
+ - npm install, bower install
+
+#Run
+- gulp serve
+
+#Build
+- gulp build
 
 

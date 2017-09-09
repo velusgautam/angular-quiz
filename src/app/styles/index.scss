@@ -1,11 +1,141 @@
-/* Do not remove the comments below. It's the markers used by wiredep to inject
-   sass dependencies when defined in the bower.json of your dependencies */
-// bower:scss
-// endbower
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
 
-@import "layout.scss";
+* {
+    box-sizing: border-box;
+}
 
-/*// injector
-// endinjector*/
+html,
+body {
+    height: 100%;
+}
 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+}
 
+a {
+    text-decoration: none;
+}
+
+hr {
+    clear: both;
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    background-image: url('./images/board.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 30px 50px;
+    width: 752px;
+    height: 426px;
+    color: white;
+    display: flex;
+}
+
+.quiz {
+    flex: 1;
+}
+
+.counter {
+    font-size: 9px;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.option {
+    line-height: 25px;
+}
+
+.buttonContainer {
+    position: relative;
+    height: 190px;
+}
+
+.buttonRow {
+    width: 350px;
+    position: absolute;
+    bottom: 0px;
+    left: 25%;
+    display: flex;
+}
+
+// .button {
+//     flex: 1;
+//     display: flex
+// }
+button {
+    margin: auto;
+    height: 50px;
+    width: 75px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    // flex: 1;
+}
+
+button:hover {
+    border: 2px solid white;
+}
+
+.pull-left {
+    float: left
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+.success {
+    background: url('./images/correct.png') no-repeat 6px 6px;
+}
+
+.failed {
+    background: url('./images/wrong.png') no-repeat 6px 6px;
+}
+
+.success,
+.failed {
+    background-size: 24px 24px;
+    width: 32px;
+    height: 32px;
+}

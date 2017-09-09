@@ -1,12 +1,23 @@
-'use strict'
+(function() {
+    'use strict'
+    var app = angular.module("AngularQuiz");
+    app.factory('dataService', ['$http', 'config', function($http, config) {
 
-angular.module("sourcingSample1").service('dataService', ['$http', function ($http) {
+        var getData = function getData() {
+            return $http({
+                url: config.QuestionLink,
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
 
-	this.getData = function () {
-		return {
-			greetings: 'Hello!',
-			info : 'This is a sample data'
-		};
-	};
+        };
 
-}]);
+        return {
+            getData: getData
+        }
+
+    }])
+
+})();
