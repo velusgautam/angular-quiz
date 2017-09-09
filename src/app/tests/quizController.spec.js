@@ -169,7 +169,7 @@ describe('QuizController', function() {
                 }
             ];
             controller.quizLogic(data.slice(0));
-            expect(controller.questions[0]).not.toEqual(data[0]);
+            expect(controller.questions[3]).not.toEqual(data[3]);
         });
 
         it('onSelect of Answer Array Push check', function() {

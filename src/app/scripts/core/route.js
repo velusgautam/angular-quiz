@@ -4,7 +4,7 @@
 
         $routeProvider
             .when('/', {
-                templateUrl: 'app/templates/main.html',
+                templateUrl: 'app/templates/quiz.html',
                 controller: 'QuizController',
                 controllerAs: 'quiz'
             })

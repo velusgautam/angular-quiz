@@ -45,7 +45,7 @@ hr {
 }
 
 .board {
-    background-image: url('./images/board.png');
+    background-image: url('/app/images/board.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -126,11 +126,11 @@ th {
 }
 
 .success {
-    background: url('./images/correct.png') no-repeat 6px 6px;
+    background: url('/app/images/correct.png') no-repeat 6px 6px;
 }
 
 .failed {
-    background: url('./images/wrong.png') no-repeat 6px 6px;
+    background: url('/app/images/wrong.png') no-repeat 6px 6px;
 }
 
 .success,

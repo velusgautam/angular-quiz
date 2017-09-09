@@ -9,8 +9,6 @@
         vm.quizLogic = quizLogic;
         vm.initializeQuiz = initializeQuiz;
 
-        initializeQuiz(); //Initalize Values
-
         function initializeQuiz() {
             vm.buttonText = config.BUTTONS;
             vm.answered = [];
@@ -55,6 +53,8 @@
                 vm.mode = 'result';
             }
         }
+
+        vm.initializeQuiz();
 
     }]);
 })()

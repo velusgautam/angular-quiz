@@ -1,6 +1,6 @@
 # Angular Quiz Application
 
-- A sample quiz application using Anuglar Js 1.x
+- A simple quiz application using Anuglar Js 1.x
 
 #Intial Setup 
  - npm install, bower install
@@ -11,4 +11,6 @@
 #Build
 - gulp build
 
+#Test
+- gulp test
 
