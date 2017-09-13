@@ -4,17 +4,17 @@
     </div>
     <div class="quiz" ng-if="quiz.error == null">
         <div ng-show="quiz.mode == 'quiz'">
-            <div ng-repeat="question in quiz.currentQuestion">
+            <div>
                 <div class="counter">Javascrpit Quiz {{quiz.currentPage}} of {{quiz.totalQuestions}}</div>
-                <div class="question">{{question.text}}</div>
+                <div class="question">{{quiz.currentQuestion[0].text}}</div>
                 <div class="options">
-                    <div class="option" ng-repeat="option in question.options">
+                    <div class="option" ng-repeat="option in quiz.currentQuestion[0].options">
                         {{quiz.buttonText[$index]}}- {{option}}
                     </div>
                 </div>
                 <div class="buttonContainer">
                     <div class="buttonRow">
-                        <button ng-repeat="button in quiz.buttonText" ng-click="quiz.onSelect(question, button)" class="pull-left">{{button}}</button>
+                        <button ng-repeat="button in quiz.buttonText" ng-click="quiz.onSelect(quiz.currentQuestion[0], button)" class="pull-left">{{button}}</button>
                     </div>
                 </div>
             </div>
