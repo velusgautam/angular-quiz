@@ -1,6 +1,9 @@
 <div class="board">
-    <div class="quiz">
-        <div ng-show="quiz.mode=='quiz'">
+    <div ng-if="quiz.error !=null ">
+        {{quiz.error}}
+    </div>
+    <div class="quiz" ng-if="quiz.error == null">
+        <div ng-show="quiz.mode == 'quiz'">
             <div ng-repeat="question in quiz.currentQuestion">
                 <div class="counter">Javascrpit Quiz {{quiz.currentPage}} of {{quiz.totalQuestions}}</div>
                 <div class="question">{{question.text}}</div>
@@ -11,14 +14,12 @@
                 </div>
                 <div class="buttonContainer">
                     <div class="buttonRow">
-                        <!-- <divclass="button"> -->
                         <button ng-repeat="button in quiz.buttonText" ng-click="quiz.onSelect(question, button)" class="pull-left">{{button}}</button>
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="result" ng-show="quiz.mode=='result'">
+        <div class="result" ng-show="quiz.mode == 'result'">
             <h2>Quiz Result</h2>
             <table>
                 <thead>

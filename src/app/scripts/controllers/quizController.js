@@ -14,6 +14,7 @@
             vm.answered = [];
             vm.currentPage = 1;
             vm.mode = 'quiz';
+            vm.error = null;
 
             dataService.getData().then(
                 function(response) {
